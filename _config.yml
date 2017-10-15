@@ -7,9 +7,6 @@ enforce_ssl: containers.ninja
 exclude: ["README.md"] # files to exclude
 highlighter: rouge
 markdown: kramdown
-#disqus: Containers.Ninja
-#google_analytics: dbyll
-#title: Containers.Ninja
 
 defaults:
   -
@@ -18,7 +15,7 @@ defaults:
     values:
       title: Containers.Ninja
 
-description: Containers Ninja - Everyhting about Containers & Cloud
+description: Containers Ninja - Everything about Containers & Cloud
 author:
   name: Mangirdas Judeikis
   email: info@containers.ninja
