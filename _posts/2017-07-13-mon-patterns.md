@@ -8,6 +8,3 @@ fullview: true
 ---
 
 TBC
-
-asd
-ads
