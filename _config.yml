@@ -1,0 +1,37 @@
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+
+paginate: 10 # pagination based on number of posts
+paginate_path: "page:num"
+exclude: ["README.md"] # files to exclude
+highlighter: rouge
+markdown: kramdown
+disqus: Containers Ninja
+#google_analytics: dbyll
+title: Containers Ninja
+
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      title: Containers Ninja
+
+description: Containers Ninja - Everyhting about Containers & Cloud
+author:
+  name: Mangirdas Judeikis
+  email: info@containers.ninja
+  github: mjudeikis
+  twitter: mangirdas
+  linkedin: mangirdas
+  bio: Cloud & Infra Consultant @ Red Hat
+
+categories_path: categories.html
+tags_path: tags.html
+
+# set it as url of an image
+# sidebar_background_image: https://www.dropbox.com/s/g9h23zrycedxtk5/sky.png?raw=1
+
+BASE_PATH:
+
+gems:
+  - jekyll-paginate
