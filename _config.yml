@@ -5,16 +5,16 @@ paginate_path: "page:num"
 exclude: ["README.md"] # files to exclude
 highlighter: rouge
 markdown: kramdown
-disqus: Containers Ninja
+disqus: Containers.Ninja
 #google_analytics: dbyll
-title: Containers Ninja
+title: Containers.Ninja
 
 defaults:
   -
     scope:
       path: "" # empty string for all files
     values:
-      title: Containers Ninja
+      title: Containers.Ninja
 
 description: Containers Ninja - Everyhting about Containers & Cloud
 author:
