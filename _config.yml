@@ -1,7 +1,7 @@
 # visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
 
-paginate: 10 # pagination based on number of posts
-paginate_path: "page:num"
+#paginate: 10 # pagination based on number of posts
+#paginate_path: "page:num"
 url: https://containers.ninja
 enforce_ssl: containers.ninja
 exclude: ["README.md"] # files to exclude
