@@ -2,6 +2,8 @@
 
 paginate: 10 # pagination based on number of posts
 paginate_path: "page:num"
+url: https://mjudeikis.github.io
+enforce_ssl: mjudeikis.github.io
 exclude: ["README.md"] # files to exclude
 highlighter: rouge
 markdown: kramdown
