@@ -9,7 +9,7 @@ highlighter: rouge
 markdown: kramdown
 disqus: Containers.Ninja
 #google_analytics: dbyll
-title: Containers.Ninja
+#title: Containers.Ninja
 
 defaults:
   -
