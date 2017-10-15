@@ -7,6 +7,8 @@ enforce_ssl: containers.ninja
 exclude: ["README.md"] # files to exclude
 highlighter: rouge
 markdown: kramdown
+disqus: ""
+title: ""
 
 defaults:
   -
