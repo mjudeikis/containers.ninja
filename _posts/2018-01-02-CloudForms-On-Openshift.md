@@ -2,7 +2,7 @@
 layout: post
 title: CloudForms deployment on Openshift
 categories: [Openshift, Cloud, CloudForms]
-tags: [cloud, containers monitoring, new relic, openshift]
+tags: [cloud, containers monitoring, cloudforms openshift]
 description: How to deploy and configure CloudForms on Openshift
 fullview: false
 ---
@@ -40,7 +40,7 @@ oc adm policy add-scc-to-user privileged system:serviceaccount:cloudforms:defaul
 oc create -f  https://raw.githubusercontent.com/openshift/openshift-ansible/master/roles/openshift_examples/files/examples/v1.5/cfme-templates/cfme-template.yaml
 
 #to check what parameters you can configure change:
-oc process --parameters -n cloud-forms cloudforms
+oc process --parameters -n cloudforms cloudforms
 
 
 NAME                                 DESCRIPTION                                                                                                 GENERATOR           VALUE
