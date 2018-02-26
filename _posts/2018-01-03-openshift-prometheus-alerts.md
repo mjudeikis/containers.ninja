@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Prometheus alerts on Openshift
-categories: [Openshift, Cloud, Prometheus, Monitoring, Grafana]
-tags: [cloud, containers monitoring, openshift, prometheus, grafana]
-description: How to Configure Prometheus, Grafana, and Openshift to send alerts when triggered. 
+title: Prometheus alerts on Openshift with SNMP trap
+categories: [Openshift, Cloud, Prometheus, Monitoring, Grafana, SNMP]
+tags: [cloud, containers monitoring, openshift, prometheus, grafana, snmp]
+description: How to Configure Prometheus, Grafana, and Openshift to send alerts when triggered via SNMP Trap 
 fullview: false
 ---
 
@@ -167,7 +167,7 @@ data:
       email_configs:
       - to: "info@containers.ninja"
       webhook_configs:
-      - url: http://localhost:9099/topics/alerts 
+      - url: http://localhost:9099/topics/alerts
 kind: ConfigMap
 metadata:
   creationTimestamp: null
@@ -181,3 +181,64 @@ alert buffer api `https://alerts-openshift-metrics.apps.34.229.160.53.xip.io/top
 
 And after few seconds emails start coming throuth:
 ![picture]({{ "/assets/media/prometheus/2018-01-04 14-29-41.png" | absolute_url }})
+
+
+
+
+NOTES for gmail:
+
+1. Create account in our org.
+2. get smtp server smtp.gmail.com:58
+
+- to: aos-devel@redhat.com
+    from: aos-alerts@redhat.com
+    smarthost: smtp.gmail.com:587
+    auth_username: "aos-alerts@redhat.com"
+    auth_identity: "$GMAIL_
+
+    Enable Gmail API in Developers 
+
+    907835609976-p4bmk630cjggfupmt4ppuhfnmn7v89gn.apps.googleusercontent.com
+
+    TbEIjcNdxqo-wPZKxOywPmYE
+
+apiVersion: v1
+data:
+  alertmanager.yml: |
+    global:
+    # The root route on which each incoming alert enters.
+        smtp_smarthost: 'smtp-relay.gmail.com:587'
+        smtp_from: 'mangirdas@judeikis.lt'
+        smtp_auth_username: 'mangirdas@judeikis.lt'
+        smtp_auth_password: 'gbolllinxjaovpvx'
+    route:
+      # default route if none match
+      receiver: all
+
+      # The labels by which incoming alerts are grouped together. For example,
+      # multiple alerts coming in for cluster=A and alertname=LatencyHigh would
+      # be batched into a single group.
+      # TODO:
+      group_by: []
+
+      # All the above attributes are inherited by all child routes and can
+      # overwritten on each.
+
+    receivers:
+    - name: alert-buffer-wh
+      webhook_configs:
+      - url: http://localhost:9099/topics/alerts
+    - name: mail
+      email_configs:
+      - to: "mangirdas@judeikis.lt"
+    - name: all
+      email_configs:
+      - to: "mangirdas@judeikis.lt"
+      webhook_configs:
+      - url: http://localhost:9099/topics/alerts
+kind: ConfigMap
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftNewApp
+  creationTimestamp: null
+  name: alertmanager
