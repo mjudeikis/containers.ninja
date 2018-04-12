@@ -122,3 +122,5 @@ Cache-control: private
 By spliting traffic we make sure we can meet our application SLA's and at the same time manage less clusters. By having everyhting in one cluster, we can save on hardware, people resources and maintenance costs.  But before you jumo towards "one cluster architecture", ask yourself - are you ready for this?
 
 This blog post is simplified version of [openshift router documentation](https://docs.openshift.com/container-platform/3.9/install_config/router/default_haproxy_router.html) and you have Prometheus already running.
+
+Special thanks for help to [@noeloc](https://twitter.com/noeloc)
