@@ -71,4 +71,6 @@ Actions inside the container:
 # command terminated with exit code 137
 ```
 
+![alt text]({{ "/assets/media/livenessvsreadiness/live_vs_ready.png" | absolute_url }})
+
 Here you go :)
