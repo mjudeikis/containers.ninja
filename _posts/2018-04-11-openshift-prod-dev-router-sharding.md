@@ -119,8 +119,8 @@ Content-Type: text/html; charset=UTF-8
 Set-Cookie: 2e2307f4645f03dde968155c002d6b44=8316f5abdc2526e8edcb1b110e430325; path=/; HttpOnly; Secure
 Cache-control: private
 ```
-By spliting traffic we make sure we can meet our application SLA's and at the same time manage less clusters. By having everyhting in one cluster, we can save on hardware, people resources and maintenance costs.  But before you jumo towards "one cluster architecture", ask yourself - are you ready for this?
+By splitting traffic we make sure we can meet our application SLA's and at the same time manage less clusters. By having everything in one cluster, we can save on hardware, people resources and maintenance costs. But before you jump towards "one cluster architecture", ask yourself - are you ready for this?
 
-This blog post is simplified version of [openshift router documentation](https://docs.openshift.com/container-platform/3.9/install_config/router/default_haproxy_router.html) and you have Prometheus already running.
+This blog post is simplified version of [openshift router documentation](https://docs.openshift.com/container-platform/3.9/install_config/router/default_haproxy_router.html)
 
 Special thanks for help to [@noeloc](https://twitter.com/noeloc)
