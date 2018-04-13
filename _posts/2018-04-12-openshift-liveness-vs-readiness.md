@@ -63,10 +63,10 @@ Actions inside the container:
 # [2] we remove health probe file and see that pod goes to notReady state
 # rm /tmp/healthy 
 # 
-# [3] we create health file again and see that pod goes to ready state without restart
+# [3] we create health file. Pod goes into ready state without restart
 # touch /tmp/healthy
 # 
-# [4] we remove liveness file and check that pods goes to notready state and is restart just after that
+# [4] we remove liveness file. Pod goes into notready state and is restarted just after that
 # rm /tmp/liveness 
 # command terminated with exit code 137
 ```
